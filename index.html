@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <link rel="script" href="script.js">
+        <script src="jquery.js"></script>
+        <script src="script.js"></script> 
+        
+    </head>
+    <body>
+        <div class="nen" width="50px"></div>
+        <div class="hopthoai">
+            <h2>Thế mà có người yêu đồ đáng ghét ấy😘</h2>
+            <span>Nhắn cho cậu ấy điii</span>
+            <form action="https://www.facebook.com/messages/t/100037023112511">
+                <button id="btnac" type="submit">Okieee</button>
+             </form>
+        </div>
+        <div id="po" ></div>
+        <div>
+            <div id="content">Cậu có biết cậu là đồ đáng ghét không❤️</div>
+            <div class="im">
+                <img src="https://img2.thuthuatphanmem.vn/uploads/2019/02/22/om-chat-trai-tim_121246075.gif" alt="">
+            </div>
+            <button id="yes">
+                <span></span><span></span><span></span><span></span>
+            Cóaaa</button>
+            <button id="no" onmouseenter="change1()" onmouseleave="change2()">
+                <span></span><span></span><span></span><span></span>
+            Hôngg</button>
+        </div>
+        <script>
+            var txt='Bỏ ngoài tai trăm lời tán tỉnh,'+
+            'Vì tôi chỉ thấy mình em xinh😘,'+
+            "Thề với chúa đây không phải là thính,"+
+            "Đây là em trong ánh mắt kẻ si tình😍😍,";
+            var i=0;
+            var speed=120;
+            function typewt(){
+                if(i<txt.length){
+                    var ch=txt.charAt(i)
+                    if(ch==",")	document.getElementById("po").innerHTML+="<br>";
+                    else	document.getElementById("po").innerHTML+=txt.charAt(i);
+                    i++;
+                    setTimeout(typewt,speed);
+                }
+                if(i==txt.length){
+                    i=0;
+                    document.getElementById("po").innerHTML="";
+                }     
+            }
+            typewt();
+            </script>
+    </body>
+</html>
